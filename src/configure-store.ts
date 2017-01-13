@@ -1,18 +1,15 @@
-import { compose, createStore } from 'redux';
+import * as createLogger from 'redux-logger';
 
-// import DevTools from './containers/dev-tools';
-// import { persistState } from 'redux-devtools';
+import { applyMiddleware, createStore } from 'redux';
+
 import rootReducer from './reducers';
 
-// const enhancer = compose(
-//   DevTools.instrument(),
-//   persistState(window.location.href.match(/[?&]debug_session=([^&#]+)\b/) as any)
-// );
+const logger = createLogger();
 
 declare var require: any;
 declare var module: any;
 export default function configureStore(initialState?: any) {
-  const store = createStore(rootReducer, initialState);
+  const store = createStore(rootReducer, initialState, applyMiddleware(logger));
 
   if ((module as any).hot) {
     (module as any).hot.accept('./reducers', () =>
