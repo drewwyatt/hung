@@ -1,12 +1,8 @@
 import { combineReducers } from 'redux';
-// import { routerReducer as routing } from 'react-router-redux';
-
-const someReducer = () => {
-    return {};
-};
+import { players } from './players.reducer';
 
 const rootReducer = combineReducers({
-    someReducer
+    players
 });
 
 export default rootReducer;
