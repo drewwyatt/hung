@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import GameBoard from './game-board';
 import { Player } from '../models';
 import PlayerSelect from './player-select';
 import { connect } from 'react-redux';
@@ -19,9 +20,7 @@ class App extends React.Component<AppProps, void> {
             return <PlayerSelect />;
         }
 
-        return (
-            <h1>This is an unhandled view state...</h1>
-        );
+        return <GameBoard />;
     }
 }
 

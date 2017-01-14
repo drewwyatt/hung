@@ -1,5 +1,9 @@
 {
 	"typescript.tsdk": "./node_modules/typescript/lib",
 	"editor.insertSpaces": true,
-	"editor.detectIndentation": false
+	"editor.detectIndentation": false,
+    "prettier.trailingComma": true,
+    "prettier.singleQuote": true,
+    "prettier.formatOnSave": true,
+    "prettier.tabWidth": 4
 }
