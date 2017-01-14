@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import PlayerSelect from './player-select';
+import App from './app';
 import { Provider } from 'react-redux';
 
 export interface RootProps {
@@ -14,7 +14,7 @@ export class Root extends React.Component<RootProps, void> {
             <section>
                 <Provider store={store}>
                     <div className='container' style={{ padding: '10px' }}>
-                        <PlayerSelect />
+                        <App />
                     </div>
                 </Provider>
             </section>
